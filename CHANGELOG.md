@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
++ Reduced amount of keywords in `package.json`
+
 ## [1.0.1] - 2018-06-23
 
 ### Added
