@@ -1,4 +1,10 @@
-# dnh
+<h1>
+  <img
+    src="https://github.com/mserajnik/dnh/raw/master/images/icon.png"
+    alt="Touhou Danmakufu syntax highlighting for Visual Studio Code Danmakufu syntax highlighting for Visual Studio Codeo">
+  <br>
+  dnh
+</h1>
 
 > Touhou Danmakufu syntax highlighting for Visual Studio Code
 

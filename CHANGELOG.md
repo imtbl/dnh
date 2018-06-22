@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
++ Added extension icon to `README.md` for some flair
+
 ### Fixed
 
 + Added the correct keywords in `package.json`
