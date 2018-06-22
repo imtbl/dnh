@@ -28,7 +28,7 @@
   "icon": "images/icon.png",
   "galleryBanner": {
     "color": "#263238",
-    "theme": "light"
+    "theme": "dark"
   },
   "contributes": {
     "languages": [{

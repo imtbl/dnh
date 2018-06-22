@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 
 + Reduced amount of keywords in `package.json`
++ Corrected `galleryBanner.theme` to `dark`
 
 ## [1.0.1] - 2018-06-23
 
