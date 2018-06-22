@@ -1,19 +1,20 @@
 {
   "name": "dnh",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Touhou Danmakufu syntax highlighting for Visual Studio Code",
   "keywords": [
-    "front-end",
-    "boilerplate",
-    "template",
-    "generator",
-    "webpack"
+    "touhou",
+    "touhou-danmakufu",
+    "touhou-danmakufu-ph3",
+    "vscode",
+    "vscode-extension",
+    "syntax-highlighting"
   ],
   "author": "Michael Serajnik <ms@mserajnik.at>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mserajnik/dnh.git"
+    "url": "https://github.com/mserajnik/dnh.git"
   },
   "bugs": {
     "url": "https://github.com/mserajnik/dnh/issues"
