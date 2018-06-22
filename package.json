@@ -1,13 +1,11 @@
 {
   "name": "dnh",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Touhou Danmakufu syntax highlighting for Visual Studio Code",
   "keywords": [
     "touhou",
     "touhou-danmakufu",
     "touhou-danmakufu-ph3",
-    "vscode",
-    "vscode-extension",
     "syntax-highlighting"
   ],
   "author": "Michael Serajnik <ms@mserajnik.at>",
@@ -30,7 +28,7 @@
   "icon": "images/icon.png",
   "galleryBanner": {
     "color": "#263238",
-    "theme": "light"
+    "theme": "dark"
   },
   "contributes": {
     "languages": [{
