@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Removed
+
++ Removed unnecessary `fileTypes` section in `syntaxes/dnh.tmLanguage.json`
+
 ### Fixed
 
 + Fixed `TouhouDanmakufu` header not getting highlighted
