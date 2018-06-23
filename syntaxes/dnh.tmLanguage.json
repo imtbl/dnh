@@ -3,10 +3,6 @@
   "name": "Touhou Danmakufu",
   "scopeName": "source.dnh",
   "firstLineMatch": "^\\s*(#TouhouDanmakufu|script_|#include).*",
-  "fileTypes": [
-    "dnh",
-    "txt"
-  ],
   "patterns": [
     {
       "match": "//.*$\\n?",
@@ -46,7 +42,7 @@
       "name": "keyword.control.flow.dnh"
     },
     {
-      "match": "^\\s*#(Touhoudnh|ScriptVersion|ID|Title|Text|Image|System|Background|BGM|Player|ReplayName)\\b",
+      "match": "^\\s*#(TouhouDanmakufu|ScriptVersion|ID|Title|Text|Image|System|Background|BGM|Player|ReplayName)\\b",
       "name": "keyword.control.header.dnh"
     },
     {

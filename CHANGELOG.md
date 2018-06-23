@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.3] - 2018-06-23
+
+### Removed
+
++ Removed unnecessary `fileTypes` section in `syntaxes/dnh.tmLanguage.json`
+
+### Fixed
+
++ Fixed `TouhouDanmakufu` header not getting highlighted
+
 ## [1.0.2] - 2018-06-23
 
 ### Fixed
@@ -30,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 + Initial release
 
-[Unreleased]: https://github.com/mserajnik/dnh/compare/1.0.2...develop
+[Unreleased]: https://github.com/mserajnik/dnh/compare/1.0.3...develop
+[1.0.3]: https://github.com/mserajnik/dnh/compare/1.0.2...1.0.3
 [1.0.2]: https://github.com/mserajnik/dnh/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/mserajnik/dnh/compare/1.0.0...1.0.1
