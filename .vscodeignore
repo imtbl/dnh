@@ -1,2 +1,12 @@
+client/node_modules/**
+!client/node_modules/vscode-jsonrpc/**
+!client/node_modules/vscode-languageclient/**
+!client/node_modules/vscode-languageserver-protocol/**
+!client/node_modules/vscode-languageserver-types/**
+tools
 .editorconfig
 .gitignore
+*.map
+*.ts
+tsconfig.base.json
+tsconfig.json

@@ -1,12 +1,12 @@
 {
   "name": "dnh",
   "version": "1.0.3",
-  "description": "Touhou Danmakufu syntax highlighting for Visual Studio Code",
+  "description": "Touhou Danmakufu extension for Visual Studio Code",
   "keywords": [
     "touhou",
     "touhou-danmakufu",
-    "touhou-danmakufu-ph3",
-    "syntax-highlighting"
+    "syntax-highlighting",
+    "language-server"
   ],
   "author": "Michael Serajnik <ms@mserajnik.at>",
   "license": "MIT",
@@ -17,30 +17,73 @@
   "bugs": {
     "url": "https://github.com/mserajnik/dnh/issues"
   },
+  "scripts": {
+    "vscode:prepublish": "cd client && yarn run update-vscode && cd .. && yarn run compile",
+    "clean:client": "rimraf ./client/out",
+    "clean:server": "rimraf ./server/out",
+    "compile:client": "yarn run clean:client && tsc -p ./client/tsconfig.json",
+    "compile:server": "yarn run clean:server && tsc -p ./server/tsconfig.json",
+    "clean": "yarn run clean:client && yarn run clean:server",
+    "compile": "yarn run compile:client && yarn run compile:server",
+    "postinstall": "cd client && yarn install && cd ../server && yarn install && cd ..",
+    "test": "yarn run compile"
+  },
   "publisher": "mserajnik",
   "displayName": "dnh",
   "engines": {
     "vscode": "^1.24.0"
   },
+  "activationEvents": [
+    "onLanguage:dnh"
+  ],
+  "main": "./client/out/extension",
   "categories": [
     "Programming Languages"
   ],
   "icon": "images/icon.png",
   "galleryBanner": {
-    "color": "#263238",
+    "color": "#a5101e",
     "theme": "dark"
   },
   "contributes": {
-    "languages": [{
-      "id": "dnh",
-      "aliases": ["Touhou Danmakufu", "dnh"],
-      "extensions": [".dnh"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "dnh",
-      "scopeName": "source.dnh",
-      "path": "./syntaxes/dnh.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "dnh",
+        "aliases": [
+          "Touhou Danmakufu",
+          "dnh"
+        ],
+        "extensions": [
+          ".dnh"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dnh",
+        "scopeName": "source.dnh",
+        "path": "./syntaxes/dnh.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "dnh",
+        "path": "./snippets/dnh.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.6",
+    "eslint": "^5.0.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.10.0",
+    "tslint-config-standard": "^7.1.0",
+    "typescript": "^2.9.2"
   }
 }

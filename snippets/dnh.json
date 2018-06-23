@@ -1,0 +1,105 @@
+{
+  "Insert variable": {
+    "prefix": "let",
+    "body": [
+      "let ${1:variableName}"
+    ],
+    "description": "Insert a variable"
+  },
+  "Insert if": {
+    "prefix": "if",
+    "body": [
+      "if (${1:statement}) {",
+      "\t${2:// do something}",
+      "} else {",
+      "\t${3:// do something else}",
+      "}"
+    ],
+    "description": "Insert an if statement"
+  },
+  "Insert alternative case": {
+    "prefix": "alternative",
+    "body": [
+      "alternative (${1:variable}) {",
+      "case (${2:caseX}) {",
+      "\t${3:// do something}",
+      "}",
+      "case (${4:caseY}) {",
+      "\t${5:// do something else}",
+      "}",
+      "others {",
+      "\t${6:// do something in default case}",
+      "}"
+    ],
+    "description": "Insert an alternative case statement"
+  },
+  "Insert loop": {
+    "prefix": "loop",
+    "body": [
+      "loop (${1:counter}) {",
+      "\t${2:// do something}",
+      "}"
+    ],
+    "description": "Insert a loop"
+  },
+  "Insert while": {
+    "prefix": "while",
+    "body": [
+      "while (${1:variable} < ${2:number}) {",
+      "\t${3:// do something}",
+      "\t$1++",
+      "}"
+    ],
+    "description": "Insert a while loop"
+  },
+  "Insert ascent": {
+    "prefix": "ascent",
+    "body": [
+      "ascent (in in ${1:0}..${2:10}) {",
+      "\t${3:// do something}",
+      "}"
+    ],
+    "description": "Insert an ascent loop"
+  },
+  "Insert local": {
+    "prefix": "local",
+    "body": [
+      "local {",
+      "\t${1:// do something}",
+      "}"
+    ],
+    "description": "Insert a local block"
+  },
+  "Insert yield": {
+    "prefix": "yield",
+    "body": [
+      "yield"
+    ],
+    "description": "Insert a yield"
+  },
+  "Insert function": {
+    "prefix": "function",
+    "body": [
+      "function functionName (${1:arguments}) {",
+      "\t${2:// do something}",
+      "}"
+    ],
+    "description": "Insert a function"
+  },
+  "Insert task": {
+    "prefix": "task",
+    "body": [
+      "task TaskName (${1:arguments}) {",
+      "\t${2:// do something}",
+      "}"
+    ],
+    "description": "Insert a task"
+  },
+  "Insert include": {
+    "prefix": "include",
+    "body": [
+      "#include \"${1:scriptPath}\""
+    ],
+    "description": "Insert an include"
+  }
+}

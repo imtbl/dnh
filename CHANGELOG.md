@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
++ Added language server for code completion and on-demand documentation on
+  hover
++ Added snippets
+
 ## [1.0.3] - 2018-06-23
 
 ### Removed
