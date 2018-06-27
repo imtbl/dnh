@@ -1,0 +1,22 @@
+[
+  {
+    "name": "@Initialize",
+    "description": "Runs only once at the start of the script."
+  },
+  {
+    "name": "@Finalize",
+    "description": "Runs only once at the end of the script."
+  },
+  {
+    "name": "@MainLoop",
+    "description": "Runs once per frame."
+  },
+  {
+    "name": "@Loading",
+    "description": "Runs only once before `@Initialize` and should only be used for loading resources."
+  },
+  {
+    "name": "@Event",
+    "description": "Runs automatically when needed and is used to control various events."
+  }
+]

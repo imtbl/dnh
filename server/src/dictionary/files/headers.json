@@ -1,0 +1,57 @@
+[
+  {
+    "name": "#TouhouDanmakufu",
+    "argument": "scriptType",
+    "description": "Designates the file as a Touhou Danmakufu script and determines the type.\n\nPossible types are `Single`, `Plural`, `Stage` and `Package`."
+  },
+  {
+    "name": "#ScriptVersion",
+    "argument": "3",
+    "description": "Sets the script version.\n\nph3 requires `3` as version."
+  },
+  {
+    "name": "#ID",
+    "argument": "\"scriptId\"",
+    "description": "Sets the ID of the script.\n\nIf omitted, the file name becomes the ID.\n\nUsed internally to distinguish between scripts."
+  },
+  {
+    "name": "#Title",
+    "argument": "\"scriptTitle\"",
+    "description": "Sets the title of the script.\n\nDisplayed in the main menu.\n\nUse `[r]` for line breaks."
+  },
+  {
+    "name": "#Text",
+    "argument": "\"scriptDescription\"",
+    "description": "Sets the description of the script.\n\nDisplayed in the main menu.\n\nUse `[r]` for line breaks."
+  },
+  {
+    "name": "#Image",
+    "argument": "\"imagePath\"",
+    "description": "Sets the image displayed in the menu when highlighting the script.\n\nUse `640x480` images."
+  },
+  {
+    "name": "#System",
+    "argument": "\"scriptPath\"",
+    "description": "Sets the path to the system script.\n\nIf omitted, the default system script under `/script/default_system/Default_System.txt` will be used."
+  },
+  {
+    "name": "#Background",
+    "argument": "\"scriptPath\"",
+    "description": "Sets the path to the background script.\n\nIf omitted, the background is black."
+  },
+  {
+    "name": "#BGM",
+    "argument": "\"audioFilePath\"",
+    "description": "Sets the path to an audio file that plays in the background.\n\nYou can also manually load and play audio files in your script."
+  },
+  {
+    "name": "#Player",
+    "argument": "\"scriptPath\"",
+    "description": "Sets the players that can be used with the script.\n\nIf omitted, all players can be used.\n\nYou can specify multiple players by passing multiple parameters, e.g., `#Player[\"./player/player1/player1.txt\", \"./player/player2/player2.txt\"]`."
+  },
+  {
+    "name": "#ReplayName",
+    "argument": "\"replayName\"",
+    "description": "Sets a custom name for replays.\n\nMust be 8 characters or less."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "name": "dnh-server",
+  "version": "1.1.0",
+  "description": "Touhou Danmakufu language server",
+  "author": "Michael Serajnik <ms@mserajnik.at>",
+  "license": "MIT",
+  "publisher": "vscode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mserajnik/dnh.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {
+    "vscode-languageserver": "^4.2.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "dnh-client",
+  "version": "1.1.0",
+  "description": "Client part of the Touhou Danmakufu language server",
+  "author": "Michael Serajnik <ms@mserajnik.at>",
+  "license": "MIT",
+  "publisher": "vscode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mserajnik/dnh.git"
+  },
+  "scripts": {
+    "update-vscode": "node ./node_modules/vscode/bin/install",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "engines": {
+    "vscode": "^1.24.0"
+  },
+  "dependencies": {
+    "vscode": "^1.1.18",
+    "vscode-languageclient": "^4.2.1"
+  }
+}
