@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 + Added VS Code Marketplace link in form of a badge
 
+### Changed
+
++ Adjusted/expanded readme
+
 ## [1.1.0] - 2018-06-27
 
 ### Added

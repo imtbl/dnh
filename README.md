@@ -68,9 +68,9 @@ can also check for available updates manually via
 ## Usage
 
 Opening `.dnh` files with VS Code should automatically set the correct syntax
-highlighting and enable code completion and documentation, but you can also set
-it manually via `Change Language Mode` (e.g., for `.txt` files where VS Code
-would default to plain text without highlighting).
+highlighting and enable code completion, documentation and snippets, but you
+can also set it manually via `Change Language Mode` (e.g., for `.txt` files
+where VS Code would default to plain text without highlighting).
 
 ### Completion
 
