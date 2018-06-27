@@ -5,6 +5,11 @@
     width="182">
   <br>
   dnh
+  <a href="https://marketplace.visualstudio.com/items?itemName=mserajnik.dnh">
+    <img
+      src="https://img.shields.io/vscode-marketplace/v/mserajnik.dnh.svg"
+      alt="dnh on the VS Code Marketplace">
+  </a>
   <a href="https://travis-ci.com/mserajnik/dnh">
     <img src="https://travis-ci.com/mserajnik/dnh.svg" alt="Build status">
   </a>
