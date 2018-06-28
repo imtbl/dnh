@@ -8,12 +8,9 @@ import {
   TextDocumentPositionParams
 } from 'vscode-languageserver'
 
-import { completions, completionDetails, infoHovers } from './dictionary'
+import { CursorInfo } from './common/types'
 
-interface CursorInfo {
-  type: string,
-  word: string
-}
+import { completions, completionDetails, infoHovers } from './dictionary'
 
 const getCursorInfo = (
   text: string,

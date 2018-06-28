@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ShotData",
+    "description": "Contains shot data. Possible content:\n\n`id` sets the ID.\n\n`rect` sets the drawing rectangle. Is ignored if there is animation.\n\n`render` sets the render mode. It defaults to `ALPHA` if not specified.\n\n`delay_rect` sets the drawing rectangle during the delay. If not specified, the `delay_rect` setting specified outside the `ShotData` block is used.\n\n`delay_color` sets the light color during the delay. If not specified, the `delay_rect` setting specified outside the `ShotData` block is used.\n\n`delay_render` sets the render mode during the delay. It defaults to `ADD_ARGB` if not specified.\n\n`angular_velocity` sets the rotation speed. It defaults to `0` if not specified.\n\n`fixed_angle` sets a fixed drawing, if set to `true`, regardless of movement direction. It defaults to `false` if not specified.\n\n`collision` sets the position and size of the hitbox. It gets calculated based on the shot size if not specified.\n\n`AnimationData` contains `animation_data` instructions to animate the shot."
+  },
+  {
+    "name": "ItemData",
+    "description": "Contains item data. Possible content:\n\n`id` sets the ID.\n\n`type` sets the item type (used in `@Event`). If not specified, it is the same as `id`.\n\n`rect` sets the drawing rectangle. Is ignored if there is animation.\n\n`out` sets the drawing rectangle when the item is outside the screen.\n\n`render` sets the render mode. It defaults to `ALPHA` if not specified.\n\n`AnimationData` contains `animation_data` instructions to animate the item."
+  }
+]

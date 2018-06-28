@@ -1,6 +1,6 @@
 {
   "name": "dnh",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Touhou Danmakufu extension for Visual Studio Code",
   "keywords": [
     "touhou",
@@ -56,9 +56,16 @@
         "extensions": [
           ".dnh"
         ],
+        "firstLine": "^\\s*(#TouhouDanmakufu|script_|#include|#UserShotData|#UserItemData).*",
         "configuration": "./language-configuration.json"
       }
     ],
+    "configurationDefaults": {
+      "[dnh]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+      }
+    },
     "grammars": [
       {
         "language": "dnh",
@@ -74,7 +81,7 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^10.3.6",
+    "@types/node": "^10.5.0",
     "eslint": "^5.0.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",

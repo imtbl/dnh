@@ -5,6 +5,11 @@
     width="182">
   <br>
   dnh
+  <a href="https://marketplace.visualstudio.com/items?itemName=mserajnik.dnh">
+    <img
+      src="https://img.shields.io/vscode-marketplace/v/mserajnik.dnh.svg"
+      alt="dnh on the VS Code Marketplace">
+  </a>
   <a href="https://travis-ci.com/mserajnik/dnh">
     <img src="https://travis-ci.com/mserajnik/dnh.svg" alt="Build status">
   </a>
@@ -29,9 +34,10 @@ features to make developing [Touhou Danmakufu][touhou-danmakufu] scripts more
 comfortable. It currently features:
 
 + Syntax highlighting
-+ Code completion for ph3 engine library functions, headers and routines
-+ On-Demand documentation for ph3 engine library functions, headers and
-  routines (on hover)
++ Code completion for ph3 engine library functions, headers, routines and
+  shot/item data
++ On-Demand documentation for ph3 engine library functions, headers, routines
+  and shot/item data (on hover)
 + A variety of useful snippets
 
 ## Table of contents
@@ -63,16 +69,16 @@ can also check for available updates manually via
 ## Usage
 
 Opening `.dnh` files with VS Code should automatically set the correct syntax
-highlighting and enable code completion and documentation, but you can also set
-it manually via `Change Language Mode` (e.g., for `.txt` files where VS Code
-would default to plain text without highlighting).
+highlighting and enable code completion, documentation and snippets, but you
+can also set it manually via `Change Language Mode` (e.g., for `.txt` files
+where VS Code would default to plain text without highlighting).
 
 ### Completion
 
 Code completion is currently available for ph3 engine library functions,
-headers and routines. The completion system is triggered simply by typing and
-will automatically try to match the most relevant result from the list. You can
-also navigate the list with
+headers, routines and shot/item data. The completion system is triggered simply
+by typing and will automatically try to match the most relevant result from the
+list. You can also navigate the list with
 <kbd>↑</kbd> <kbd>↓</kbd> <kbd>→</kbd> <kbd>←</kbd> and select a completion to
 use.
 
@@ -88,9 +94,9 @@ settings, the info window might be opened by default).
 ### Documentation
 
 Documentation is available for the same types as completion (ph3 engine library
-functions, headers and routines). It comes in the form of info windows that are
-activated on hover and display similar information as when clicking on the `ⓘ`
-icon on completion items.
+functions, headers, routines and shot/item data). It comes in the form of info
+windows that are activated on hover and display similar information as when
+clicking on the `ⓘ` icon on completion items.
 
 ### Snippets
 
@@ -164,7 +170,8 @@ own software/projects.
 
 The syntax configuration was originally created by [drakeirving][drakeirving]
 for his [Sublime Text extension][sublime-danmakufu]. I have merely converted
-his TextMate grammar file to JSON and made some VS Code-specific adjustments.
+his TextMate grammar file to JSON, made some VS Code-specific adjustments and
+expanded it a bit.
 
 The built-in ph3 engine library function documentation is a parsed version of
 [Sparen of Iría][sparen]'s [ph3 function reference][sparen-function-reference],

@@ -53,5 +53,15 @@
     "name": "#ReplayName",
     "argument": "\"replayName\"",
     "description": "Sets a custom name for replays.\n\nMust be 8 characters or less."
+  },
+  {
+    "name": "#UserShotData",
+    "argument": "",
+    "description": "Designates that the file contains shot data."
+  },
+  {
+    "name": "#UserItemData",
+    "argument": "",
+    "description": "Designates that the file contains item data."
   }
 ]
