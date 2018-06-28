@@ -56,9 +56,16 @@
         "extensions": [
           ".dnh"
         ],
+        "firstLine": "^\\s*(#TouhouDanmakufu|script_|#include|#UserShotData|#UserItemData).*",
         "configuration": "./language-configuration.json"
       }
     ],
+    "configurationDefaults": {
+      "[dnh]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2
+      }
+    },
     "grammars": [
       {
         "language": "dnh",

@@ -7,6 +7,7 @@ import {
 import functions from './files/functions.json'
 import headers from './files/headers.json'
 import routines from './files/routines.json'
+import dataBlocks from './files/data.json'
 
 import worker from './worker'
 
@@ -59,6 +60,25 @@ for (const routine of routines) {
     contents: {
       kind: MarkupKind.Markdown,
       value: routine.description
+    }
+  })
+}
+
+for (const dataBlock of dataBlocks) {
+  const processedDataBlock = worker.processDataBlock(
+    dataBlock, completionsCounter
+  )
+
+  completions.push(processedDataBlock.basic)
+  completionDetails.push(processedDataBlock.details)
+
+  completionsCounter++
+
+  infoHovers.push({
+    name: dataBlock.name,
+    contents: {
+      kind: MarkupKind.Markdown,
+      value: dataBlock.description
     }
   })
 }

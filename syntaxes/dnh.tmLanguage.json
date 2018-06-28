@@ -2,7 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Touhou Danmakufu",
   "scopeName": "source.dnh",
-  "firstLineMatch": "^\\s*(#TouhouDanmakufu|script_|#include).*",
   "patterns": [
     {
       "match": "//.*$\\n?",
@@ -42,7 +41,7 @@
       "name": "keyword.control.flow.dnh"
     },
     {
-      "match": "^\\s*#(TouhouDanmakufu|ScriptVersion|ID|Title|Text|Image|System|Background|BGM|Player|ReplayName)\\b",
+      "match": "^\\s*#(TouhouDanmakufu|ScriptVersion|ID|Title|Text|Image|System|Background|BGM|Player|ReplayName|UserShotData|UserItemData)\\b",
       "name": "keyword.control.header.dnh"
     },
     {
@@ -78,6 +77,10 @@
     {
       "match": "^\\s*@(Initialize|Loading|Event|MainLoop|Finalize)\\b",
       "name": "entity.name.function.predefined.dnh"
+    },
+    {
+      "match": "\\b(ShotData|ItemData)\\b",
+      "name": "entity.name.function.data.dnh"
     },
     {
       "begin": "^\\s*(function|sub|task)\\b",

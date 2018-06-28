@@ -105,16 +105,24 @@ export default {
   processHeader: (header: any, data: number): CombinedCompletion => {
     const processedHeader = {} as CombinedCompletion
 
+    let insertText = header.name
+    let detail = `(header) ${header.name}`
+
+    if (header.argument !== '') {
+      insertText += `[\${1:${header.argument}}]`
+      detail += `[${header.argument}]`
+    }
+
     processedHeader.basic = {
       label: header.name,
-      insertText: `${header.name}[\${1:${header.argument}}]`,
+      insertText: insertText,
       insertTextFormat: InsertTextFormat.Snippet,
       kind: CompletionItemKind.Keyword,
       data: data
     }
 
     processedHeader.details = {
-      detail: `(header) ${header.name}[${header.argument}]`,
+      detail: detail,
       documentation: {
         kind: MarkupKind.Markdown,
         value: header.description
@@ -128,7 +136,7 @@ export default {
 
     processedRoutine.basic = {
       label: routine.name,
-      insertText: `${routine.name} {\n\t$0\n}`,
+      insertText: `${routine.name} {\n\t$1\n}`,
       insertTextFormat: InsertTextFormat.Snippet,
       kind: CompletionItemKind.Struct,
       data: data
@@ -143,5 +151,26 @@ export default {
     }
 
     return processedRoutine
+  },
+  processDataBlock : (dataBlock: any, data: number): CombinedCompletion => {
+    const processedDataBlock = {} as CombinedCompletion
+
+    processedDataBlock.basic = {
+      label: dataBlock.name,
+      insertText: `${dataBlock.name} {\n\t$1\n}`,
+      insertTextFormat: InsertTextFormat.Snippet,
+      kind: CompletionItemKind.Struct,
+      data: data
+    }
+
+    processedDataBlock.details = {
+      detail: `(data) ${dataBlock.name}`,
+      documentation: {
+        kind: MarkupKind.Markdown,
+        value: dataBlock.description
+      }
+    }
+
+    return processedDataBlock
   }
 }
