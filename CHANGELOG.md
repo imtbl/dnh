@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
++ Refactored JSON processing
 + Added VS Code Marketplace link in form of a badge
 
 ### Changed
