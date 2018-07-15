@@ -1238,18 +1238,13 @@
   },
   {
     "name": "GetCurrentDateTimeS",
-    "arguments": [
-      {
-        "name": "date",
-        "type": "string"
-      }
-    ],
+    "arguments": [],
     "return": {
       "name": "string containing the current date and time",
       "type": "string (date)"
     },
     "description": "Returns a string containing the current date and time.",
-    "notes": "Example: If the current date is 2012/09/16 12:34:56, then '20120916123456' will be returned.\n\nTo convert to a number use atoi like so: `let year = atoi(GetCurrentDateTimeS[0..4]);`"
+    "notes": "Example: If the current date is 2012/09/16 12:34:56, then '20120916123456' will be returned.\n\nTo convert to a number use atoi like so: `let year = atoi(GetCurrentDateTimeS()[0..4]);`"
   },
   {
     "name": "GetStageTime",
@@ -2496,7 +2491,7 @@
     "notes": "Defaults to center of the playing field."
   },
   {
-    "name": "Set2DCameraFocusZ",
+    "name": "Set2DCameraAngleZ",
     "arguments": [
       {
         "name": "rotation",
