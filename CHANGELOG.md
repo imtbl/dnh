@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 
++ Updated ph3 function reference
 + Adjusted copyright notices in license to comply with the standard
 + Updated dependencies
 
