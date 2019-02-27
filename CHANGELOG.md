@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Changed
 
 + Updated ph3 function reference
++ Updated Travis CI configuration
 + Updated dependencies
 
 ## [1.3.0] - 2018-07-15
