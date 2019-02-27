@@ -2000,8 +2000,8 @@
       }
     ],
     "return": {},
-    "description": "Renders the specified range of invalid render priority drawings to a texture.",
-    "notes": "TODO: What does rendertargetclear do?"
+    "description": "Renders the specified range of invalid render priority drawings to a texture.\n\nSet rendertargetclear to true in order to clear the render target after each frame. If set to false, the render target will remain into the next frame.",
+    "notes": ""
   },
   {
     "name": "RenderToTextureB1",
@@ -2020,8 +2020,8 @@
       }
     ],
     "return": {},
-    "description": "Renders the specified object to texture.",
-    "notes": "TODO: What does rendertargetclear do?"
+    "description": "Renders the specified object to texture.\n\nSet rendertargetclear to true in order to clear the render target after each frame. If set to false, the render target will remain into the next frame.",
+    "notes": ""
   },
   {
     "name": "SaveRenderedTextureA1",
