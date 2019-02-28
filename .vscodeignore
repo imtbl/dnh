@@ -1,3 +1,4 @@
+.vscode/**
 client/node_modules/**
 !client/node_modules/vscode-jsonrpc/**
 !client/node_modules/vscode-languageclient/**
@@ -6,7 +7,7 @@ client/node_modules/**
 tools
 .editorconfig
 .gitignore
+.travis.yml
+tsconfig.json
 *.map
 *.ts
-tsconfig.base.json
-tsconfig.json

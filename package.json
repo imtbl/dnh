@@ -18,15 +18,11 @@
     "url": "https://github.com/mserajnik/dnh/issues"
   },
   "scripts": {
-    "vscode:prepublish": "cd client && yarn run update-vscode && cd .. && yarn run compile",
-    "clean:client": "rimraf ./client/out",
-    "clean:server": "rimraf ./server/out",
-    "compile:client": "yarn run clean:client && tsc -p ./client/tsconfig.json",
-    "compile:server": "yarn run clean:server && tsc -p ./server/tsconfig.json",
-    "clean": "yarn run clean:client && yarn run clean:server",
-    "compile": "yarn run compile:client && yarn run compile:server",
-    "postinstall": "cd client && yarn install && cd ../server && yarn install && cd ..",
-    "test": "yarn run compile"
+    "vscode:prepublish": "cd client && yarn update-vscode && cd .. && yarn compile",
+    "clean": "rimraf ./client/out && rimraf ./server/out",
+    "compile": "yarn clean && tsc -b",
+    "postinstall": "cd client && yarn && cd ../server && yarn && cd ..",
+    "test": "yarn compile"
   },
   "publisher": "mserajnik",
   "displayName": "dnh",
@@ -81,16 +77,16 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^11.9.5",
-    "eslint": "^5.14.1",
+    "@types/node": "^11.10.4",
+    "@typescript-eslint/eslint-plugin": "^1.4.2",
+    "@typescript-eslint/parser": "^1.4.2",
+    "eslint": "^5.15.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "rimraf": "^2.6.3",
-    "tslint": "^5.13.0",
-    "tslint-config-standard": "^8.0.1",
     "typescript": "^3.3.3333"
   }
 }

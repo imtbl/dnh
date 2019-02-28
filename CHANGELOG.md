@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
++ Reintroduced support for unsaved files
++ Updated tooling
++ Refactored code
+
 ## [1.4.0] - 2019-02-28
 
 ### Changed

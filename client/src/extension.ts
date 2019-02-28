@@ -1,4 +1,4 @@
-import * as path from 'path'
+import path from 'path'
 import { ExtensionContext } from 'vscode'
 import {
   LanguageClient, LanguageClientOptions, ServerOptions, TransportKind
@@ -6,7 +6,7 @@ import {
 
 let client: LanguageClient
 
-export function activate (context: ExtensionContext) {
+export function activate (context: ExtensionContext): void {
   const serverModule = context.asAbsolutePath(
     path.join('server', 'out', 'server.js')
   )
@@ -14,7 +14,7 @@ export function activate (context: ExtensionContext) {
   const debugOptions = { execArgv: ['--nolazy', '--inspect=6009'] }
 
   const serverOptions: ServerOptions = {
-    run : { module: serverModule, transport: TransportKind.ipc },
+    run: { module: serverModule, transport: TransportKind.ipc },
     debug: {
       module: serverModule,
       transport: TransportKind.ipc,
@@ -23,7 +23,10 @@ export function activate (context: ExtensionContext) {
   }
 
   const clientOptions: LanguageClientOptions = {
-    documentSelector: [{ scheme: 'file', language: 'dnh' }]
+    documentSelector: [
+      { scheme: 'file', language: 'dnh' },
+      { scheme: 'untitled', language: 'dnh' }
+    ]
   }
 
   client = new LanguageClient(
@@ -36,7 +39,7 @@ export function activate (context: ExtensionContext) {
   client.start()
 }
 
-export function deactivate (): Thenable<void> {
+export function deactivate (): Thenable<void> | undefined {
   if (!client) {
     return undefined
   }
