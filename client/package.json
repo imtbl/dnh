@@ -1,6 +1,6 @@
 {
   "name": "dnh-client",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Client part of the Touhou Danmakufu language server",
   "author": "Michael Serajnik <ms@mserajnik.at>",
   "license": "MIT",
