@@ -8,7 +8,7 @@ import {
   TextDocumentPositionParams
 } from 'vscode-languageserver'
 
-import { CursorInfo } from './common/types'
+import { CursorInfo, InfoHover } from './common/types'
 
 import { completions, completionDetails, infoHovers } from './dictionary'
 
@@ -21,7 +21,7 @@ const getCursorInfo = (
     start--
   }
 
-  while (end < text.length && /[a-zA-Z0-9_\(]/.test(text[end])) {
+  while (end < text.length && /[a-zA-Z0-9_(]/.test(text[end])) {
     end++
 
     if (text.substr(end - 1, 1) === '(') {
@@ -52,10 +52,9 @@ connection.onInitialize(() => {
   }
 })
 
-connection.onCompletion(
-  (_textDocumentPosition: TextDocumentPositionParams):
-    CompletionItem[] => completions
-)
+connection.onCompletion((): CompletionItem[] => {
+  return completions
+})
 
 connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
   item.detail = completionDetails[item.data].detail
@@ -65,10 +64,17 @@ connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
 })
 
 connection.onHover(
-  (textDocumentPosition: TextDocumentPositionParams): Hover => {
-    const document: TextDocument = documents.get(
+  (textDocumentPosition: TextDocumentPositionParams): Hover | undefined => {
+    const document: TextDocument | undefined = documents.get(
       textDocumentPosition.textDocument.uri
     )
+
+    if (!document) {
+      return {
+        contents: ''
+      }
+    }
+
     const text: string = document.getText()
     const offset: number = document.offsetAt(textDocumentPosition.position)
 
@@ -77,28 +83,28 @@ connection.onHover(
 
     const cursorInfo: CursorInfo = getCursorInfo(text, start, end)
 
-    let result: any = 'undefined'
+    let result: CompletionItem | InfoHover | undefined
 
     if (cursorInfo.type === 'function') {
-      result = (cursorInfo.word !== '')
+      result = cursorInfo.word !== ''
         ? completions.find(item => item.label.startsWith(cursorInfo.word))
         : undefined
 
       return {
-        contents: (result)
+        contents: result
           ? completionDetails[result.data].documentation
-          : undefined
+          : ''
       }
     }
 
-    result = (cursorInfo.word !== '')
+    result = cursorInfo.word !== ''
       ? infoHovers.find(item => item.name.startsWith(cursorInfo.word))
       : undefined
 
     return {
-      contents: (result)
+      contents: result
         ? result.contents
-        : undefined
+        : ''
     }
   }
 )

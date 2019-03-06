@@ -1,21 +1,23 @@
 import {
+  CompletionItem,
   CompletionItemKind,
   InsertTextFormat,
   MarkupKind
 } from 'vscode-languageserver-protocol'
 
-import { CombinedCompletion } from '../../common/types'
+import { CompletionDetail, CombinedCompletion } from '../../common/types'
 
 export default {
   processFunction: (func: any, data: number): CombinedCompletion => {
-    const processedFunction = {} as CombinedCompletion
+    let completionItem: CompletionItem
+    let completionDetail: CompletionDetail
 
-    const args: any[] = []
-    const snippetArgs: any[] = []
-    const detailArgs: any[] = []
-    const params: any[] = []
+    const args: string[] = []
+    const snippetArgs: string[] = []
+    const detailArgs: string[] = []
+    const params: string[] = []
 
-    let argsCounter: number = 0
+    let argsCounter = 0
 
     for (const arg of func.arguments) {
       argsCounter++
@@ -34,7 +36,7 @@ export default {
       params.push(`_@param_ \`${arg.name}\``)
     }
 
-    processedFunction.basic = {
+    completionItem = {
       label: `${func.name}(${args.join(', ')})`,
       insertText: `${func.name}(${snippetArgs.join(', ')})`,
       insertTextFormat: InsertTextFormat.Snippet,
@@ -92,7 +94,7 @@ export default {
       }
     }
 
-    processedFunction.details = {
+    completionDetail = {
       detail: details,
       documentation: {
         kind: MarkupKind.Markdown,
@@ -100,10 +102,14 @@ export default {
       }
     }
 
-    return processedFunction
+    return {
+      basic: completionItem,
+      details: completionDetail
+    }
   },
   processHeader: (header: any, data: number): CombinedCompletion => {
-    const processedHeader = {} as CombinedCompletion
+    let completionItem: CompletionItem
+    let completionDetail: CompletionDetail
 
     let insertText = header.name
     let detail = `(header) ${header.name}`
@@ -113,7 +119,7 @@ export default {
       detail += `[${header.argument}]`
     }
 
-    processedHeader.basic = {
+    completionItem = {
       label: header.name,
       insertText: insertText,
       insertTextFormat: InsertTextFormat.Snippet,
@@ -121,7 +127,7 @@ export default {
       data: data
     }
 
-    processedHeader.details = {
+    completionDetail = {
       detail: detail,
       documentation: {
         kind: MarkupKind.Markdown,
@@ -129,12 +135,16 @@ export default {
       }
     }
 
-    return processedHeader
+    return {
+      basic: completionItem,
+      details: completionDetail
+    }
   },
   processRoutine: (routine: any, data: number): CombinedCompletion => {
-    const processedRoutine = {} as CombinedCompletion
+    let completionItem: CompletionItem
+    let completionDetail: CompletionDetail
 
-    processedRoutine.basic = {
+    completionItem = {
       label: routine.name,
       insertText: `${routine.name} {\n\t$1\n}`,
       insertTextFormat: InsertTextFormat.Snippet,
@@ -142,7 +152,7 @@ export default {
       data: data
     }
 
-    processedRoutine.details = {
+    completionDetail = {
       detail: `(routine) ${routine.name}`,
       documentation: {
         kind: MarkupKind.Markdown,
@@ -150,12 +160,16 @@ export default {
       }
     }
 
-    return processedRoutine
+    return {
+      basic: completionItem,
+      details: completionDetail
+    }
   },
-  processDataBlock : (dataBlock: any, data: number): CombinedCompletion => {
-    const processedDataBlock = {} as CombinedCompletion
+  processDataBlock: (dataBlock: any, data: number): CombinedCompletion => {
+    let completionItem: CompletionItem
+    let completionDetail: CompletionDetail
 
-    processedDataBlock.basic = {
+    completionItem = {
       label: dataBlock.name,
       insertText: `${dataBlock.name} {\n\t$1\n}`,
       insertTextFormat: InsertTextFormat.Snippet,
@@ -163,7 +177,7 @@ export default {
       data: data
     }
 
-    processedDataBlock.details = {
+    completionDetail = {
       detail: `(data) ${dataBlock.name}`,
       documentation: {
         kind: MarkupKind.Markdown,
@@ -171,6 +185,9 @@ export default {
       }
     }
 
-    return processedDataBlock
+    return {
+      basic: completionItem,
+      details: completionDetail
+    }
   }
 }

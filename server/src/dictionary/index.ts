@@ -15,7 +15,7 @@ const completions: CompletionItem[] = []
 const completionDetails: CompletionDetail[] = []
 const infoHovers: InfoHover[] = []
 
-let completionsCounter: number = 0
+let completionsCounter = 0
 
 for (const func of functions) {
   const processedFunction: CombinedCompletion = worker.processFunction(
