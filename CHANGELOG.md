@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+
++ Fixed language server not working by including `semver` in the extension
+  package
+
 ## [1.5.0] - 2019-03-06
 
 ### Changed

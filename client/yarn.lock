@@ -1386,17 +1386,17 @@ vscode-jsonrpc@^4.0.0:
   integrity sha512-perEnXQdQOJMTDFNv+UF3h1Y0z4iSiaN9jIlb0OqIYgosPCZGYh/MCUlkFtV2668PL69lRDO32hmvL2yiidUYg==
 
 vscode-languageclient@^5.3.0-next.1:
-  version "5.3.0-next.1"
-  resolved "https://registry.yarnpkg.com/vscode-languageclient/-/vscode-languageclient-5.3.0-next.1.tgz#b6456c56e3318c8a3fb761f4af3619ae64ca770c"
-  integrity sha512-q5o6vHHDi+HjFOFUNC288Dee5jyAO4mEufoOaF2wKCjVP1qoJGbnBalTNGuakJThrdn0RDa0XdHZgXKFyZomCQ==
+  version "5.3.0-next.2"
+  resolved "https://registry.yarnpkg.com/vscode-languageclient/-/vscode-languageclient-5.3.0-next.2.tgz#d638b3b7e38af2509025e5da75d9548199b5b002"
+  integrity sha512-7nuY3CNU0hiV3/c4eiKIV2gVLbXh9qOP5v9iPZn1VqgXE8KrvNJM9rhDNzp2sgfWE9bNPO122QqV359gDMNvYA==
   dependencies:
     semver "^5.5.0"
-    vscode-languageserver-protocol "3.15.0-next.1"
+    vscode-languageserver-protocol "3.15.0-next.2"
 
-vscode-languageserver-protocol@3.15.0-next.1:
-  version "3.15.0-next.1"
-  resolved "https://registry.yarnpkg.com/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.15.0-next.1.tgz#1e45e224d7eef8c79b4bed75b9dcb1930d2ab8ed"
-  integrity sha512-LXF0d9s3vxFBxVQ4aKl/XghdEMAncGt3dh4urIYa9Is43g3MfIQL9fC44YZtP+XXOrI2rpZU8lRNN01U1V6CDg==
+vscode-languageserver-protocol@3.15.0-next.2:
+  version "3.15.0-next.2"
+  resolved "https://registry.yarnpkg.com/vscode-languageserver-protocol/-/vscode-languageserver-protocol-3.15.0-next.2.tgz#c77c5f0b439fb2536444bff55d2f36f0ac4c389f"
+  integrity sha512-nJ8l8qc6BjtUwrqP5VvCH9+2KreOQZ576qVvR0IquuOXcbAYJ32ElJJCJNru4rYPLziYUB2qdCjASw7oHxB8OQ==
   dependencies:
     vscode-jsonrpc "^4.0.0"
     vscode-languageserver-types "3.14.0"

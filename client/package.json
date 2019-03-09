@@ -10,8 +10,8 @@
     "url": "https://github.com/mserajnik/dnh.git"
   },
   "scripts": {
-		"update-vscode": "vscode-install",
-		"postinstall": "vscode-install"
+    "update-vscode": "vscode-install",
+    "postinstall": "vscode-install"
   },
   "engines": {
     "vscode": "^1.30.0"
@@ -20,6 +20,6 @@
     "vscode-languageclient": "^5.3.0-next.1"
   },
   "devDependencies": {
-		"vscode": "^1.1.30"
-	}
+    "vscode": "^1.1.30"
+  }
 }
