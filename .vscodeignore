@@ -1,5 +1,6 @@
 .vscode/**
 client/node_modules/**
+!client/node_modules/semver/**
 !client/node_modules/vscode-jsonrpc/**
 !client/node_modules/vscode-languageclient/**
 !client/node_modules/vscode-languageserver-protocol/**
