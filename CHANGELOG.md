@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.6.0] - 2019-05-07
+
+### Changed
+
++ Updated dependencies
+
 ## [1.5.1] - 2019-03-11
 
 ### Fixed
@@ -92,7 +98,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 + Initial release
 
-[Unreleased]: https://github.com/mserajnik/dnh/compare/1.5.1...develop
+[Unreleased]: https://github.com/mserajnik/dnh/compare/1.6.0...develop
+[1.6.0]: https://github.com/mserajnik/dnh/compare/1.5.1...1.6.0
 [1.5.1]: https://github.com/mserajnik/dnh/compare/1.5.0...1.5.1
 [1.5.0]: https://github.com/mserajnik/dnh/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/mserajnik/dnh/compare/1.3.0...1.4.0
