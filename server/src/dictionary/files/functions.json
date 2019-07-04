@@ -5834,6 +5834,22 @@
       {
         "name": "objID",
         "type": "number (Object ID)"
+      },
+      {
+        "name": "left",
+        "type": "number"
+      },
+      {
+        "name": "top",
+        "type": "number"
+      },
+      {
+        "name": "right",
+        "type": "number"
+      },
+      {
+        "name": "bottom",
+        "type": "number"
       }
     ],
     "return": {},
