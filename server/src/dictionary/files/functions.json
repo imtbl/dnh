@@ -1291,11 +1291,11 @@
     "arguments": [
       {
         "name": "value",
-        "type": "free"
+        "type": "string"
       }
     ],
     "return": {},
-    "description": "Outputs given value to log window.",
+    "description": "Outputs given string to log window.",
     "notes": ""
   },
   {
@@ -2338,7 +2338,7 @@
       "type": "number"
     },
     "description": "Returns the x coordinate of the camera.",
-    "notes": ""
+    "notes": "Defaults to 341.506348"
   },
   {
     "name": "GetCameraY",
@@ -2348,7 +2348,7 @@
       "type": "number"
     },
     "description": "Returns the y coordinate of the camera.",
-    "notes": ""
+    "notes": "Defaults to 353.553375"
   },
   {
     "name": "GetCameraZ",
@@ -2358,7 +2358,7 @@
       "type": "number"
     },
     "description": "Returns the z coordinate of the camera.",
-    "notes": ""
+    "notes": "Default to 91.506348"
   },
   {
     "name": "GetCameraFocusX",
@@ -2368,7 +2368,7 @@
       "type": "number"
     },
     "description": "Returns the x coordinate of the camera focus point.",
-    "notes": ""
+    "notes": "Defaults to 0"
   },
   {
     "name": "GetCameraFocusY",
@@ -2378,7 +2378,7 @@
       "type": "number"
     },
     "description": "Returns the y coordinate of the camera focus point.",
-    "notes": ""
+    "notes": "Defaults to 0"
   },
   {
     "name": "GetCameraFocusZ",
@@ -2388,7 +2388,7 @@
       "type": "number"
     },
     "description": "Returns the z coordinate of the camera focus point.",
-    "notes": ""
+    "notes": "Defaults to 0"
   },
   {
     "name": "GetCameraRadius",
@@ -2398,7 +2398,7 @@
       "type": "number"
     },
     "description": "Returns the distance from the focus point to the camera.",
-    "notes": ""
+    "notes": "Defaults to 500"
   },
   {
     "name": "GetCameraAzimuthAngle",
@@ -2408,7 +2408,7 @@
       "type": "number (degrees)"
     },
     "description": "Returns the azimuth angle from the focus point to the camera.",
-    "notes": ""
+    "notes": "Defaults to 15"
   },
   {
     "name": "GetCameraElevationAngle",
@@ -2418,7 +2418,7 @@
       "type": "number (degrees)"
     },
     "description": "Returns the elevation angle from the focus point to the camera.",
-    "notes": ""
+    "notes": "Defaults to 45"
   },
   {
     "name": "GetCameraYaw",
@@ -2428,7 +2428,7 @@
       "type": "number"
     },
     "description": "Returns the horizontal Yaw angle of the camera.",
-    "notes": ""
+    "notes": "Defaults to 0"
   },
   {
     "name": "GetCameraPitch",
@@ -2438,7 +2438,7 @@
       "type": "number"
     },
     "description": "Returns the vertical Pitch angle of the camera.",
-    "notes": ""
+    "notes": "Defaults to 0"
   },
   {
     "name": "GetCameraRoll",
@@ -2448,7 +2448,7 @@
       "type": "number"
     },
     "description": "Returns the rotational Roll angle of the camera.",
-    "notes": ""
+    "notes": "Defaults to 0"
   },
   {
     "name": "SetCameraPerspectiveClip",
@@ -5853,7 +5853,7 @@
       }
     ],
     "return": {},
-    "description": "Sets the texture rectangle for the sprite, and maps the center of the rectangle to the destination coordinates (0, 0).",
+    "description": "Sets the texture rectangle for the sprite, and maps the center of the rectangle to the destination coordinates (0, 0, 0).",
     "notes": ""
   },
   {
