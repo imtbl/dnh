@@ -1,6 +1,6 @@
 {
   "name": "dnh-client",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Client part of the Touhou Danmakufu language server",
   "author": "Michael Serajnik <ms@mserajnik.at>",
   "license": "MIT",
@@ -17,9 +17,9 @@
     "vscode": "^1.33.0"
   },
   "dependencies": {
-    "vscode-languageclient": "^5.3.0-next.6"
+    "vscode-languageclient": "^5.2.1"
   },
   "devDependencies": {
-    "vscode": "^1.1.35"
+    "vscode": "^1.1.36"
   }
 }
