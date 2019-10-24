@@ -1,6 +1,6 @@
 {
   "name": "dnh-server",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Touhou Danmakufu language server",
   "author": "Michael Serajnik <ms@mserajnik.at>",
   "license": "MIT",
