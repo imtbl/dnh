@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
++ Updated the ph3 function reference
+
 ### Fixed
 
 + Fixed the `alternative` snippet (contribution by user ooa113y)
