@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2018-2019 Michael Serajnik
+Copyright (c) 2019-present Michael Serajnik
 
 Copyright (c) 2014 drakeirving
 

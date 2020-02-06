@@ -8416,6 +8416,36 @@
     "notes": ""
   },
   {
+    "name": "ObjLaser_GetRenderWidth",
+    "arguments": [
+      {
+        "name": "objID",
+        "type": "number (Object ID)"
+      }
+    ],
+    "return": {
+      "name": "render width of laser object associated with objID",
+      "type": "number"
+    },
+    "description": "Returns the render width of the laser object associated with objID.",
+    "notes": ""
+  },
+  {
+    "name": "ObjLaser_GetIntersectionWidth",
+    "arguments": [
+      {
+        "name": "objID",
+        "type": "number (Object ID)"
+      }
+    ],
+    "return": {
+      "name": "intersection width of laser object associated with objID",
+      "type": "number"
+    },
+    "description": "Returns the intersection width of the laser object associated with objID.",
+    "notes": ""
+  },
+  {
     "name": "ObjStLaser_SetAngle",
     "arguments": [
       {

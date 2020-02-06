@@ -20,7 +20,7 @@
   "Insert alternative case": {
     "prefix": "alternative",
     "body": [
-      "alternative (${1:variable}) {",
+      "alternative (${1:variable})",
       "case (${2:caseX}) {",
       "\t${3:// do something}",
       "}",
